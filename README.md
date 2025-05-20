@@ -50,21 +50,15 @@ Topics in progress or covered:
 - Trees (Basics)
 - Time & Space Complexity basics
 
----
-
 ## 📌 Goals
 
 - Strengthen Python programming fundamentals
 - Build problem-solving skills
 - Prepare for technical interviews
 
----
-
 ## 🚧 In Progress
 
 This is a continuously evolving repository as I learn new concepts. Stay tuned for more additions!
-
----
 
 ## 📫 Connect
 
