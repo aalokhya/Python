@@ -1,0 +1,36 @@
+# 1. total sum of digits in list
+n = list(map(int,input().split()))
+total = 0
+for i in n:
+    total = total + i
+print(total)
+
+
+# 2. Given numbers from input, count how many are greater than 5
+
+n = list(map(int,input().split()))
+c = 0
+for i in n:
+    if i > 5:
+        c+=1
+print(c)
+
+
+# 3. Count how many numbers in the list are EVEN and print even numbers
+# then if numbers are even then print numbers greater than 3
+
+n = list(map(int,input().split()))
+c = 0
+even_n = []
+g_e = []
+for i in n:
+    if i % 2 == 0:
+        # print("number",i)
+        c += 1
+        # print("count",c)
+        even_n.append(i)
+        if (i>3):  # as we need to print the even no. so keep in that condition 
+            g_e.append(i)
+print("overall count",c, "\n even numbers in list are ",*even_n)
+print("even no. greater than 3 are" ,*g_e)
+
