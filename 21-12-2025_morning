@@ -1,0 +1,63 @@
+# 4. SUM OF EVEN NUMBERS GREATER THAN 3
+
+num = list(map(int,input().split()))
+e_n = []
+sum = 0
+for i in num:
+    if i % 2 == 0 and i>3:
+        # e_n.append(i)  --- if asked to print even no. we need list 
+        sum += i
+# print("even no. greater than 3 are",*e_n)  --- asked only sum so no need of list to store values
+print("sum of even no. greater than 3 is",sum)
+        
+    
+# 5. Find the maximum EVEN number in a list
+
+num = list(map(int,input().split()))
+e_n = []
+max_e = None # if 0 is given when input is negative no. o/p will be wrong so use none
+for i in num:
+    if i % 2 == 0:
+        e_n.append(i)
+        if max_e is None or i > max_e :  # if is none condition not given ---- TypeError: '>' not supported between instances of 'int' and 'NoneType'
+            max_e = i
+print(e_n)          
+print(max_e)
+        
+
+# 6. Count how many ODD numbers are less than 5
+# this sol counts duplicates also
+
+num = list(map(int,input().split()))
+o_n = []
+c = 0
+for i in num:
+    if i%2 != 0 and i < 5:
+        o_n.append(i)
+        c+=1
+print("odd no. < 5 are ", o_n , "and count is ", c)
+
+# 6. improved sol : counting the unique values and printing only them
+
+num = list(map(int,input().split()))
+o_n = set() # set stores only uniques no duplicates
+for i in num:
+    if i%2 != 0 and i < 5:
+        o_n.add(i)  # use add() for set 
+print("odd no. < 5 are ", o_n , "and count is ", len(o_n))  # for count print len()
+
+
+# 7. Count frequency of each number in the list
+
+num = list(map(int,input().split()))
+freq = {}
+for each in num:  # each is just a var name here 
+    if each in freq:
+        freq[each] += 1   # if there is already ele prst increase the count 
+    else:
+        freq[each] = 1   # add element into dict with count 1
+print(freq)
+    
+
+
+
