@@ -1,0 +1,81 @@
+# 8. From the list, find the first element that appears exactly once
+
+num = list(map(int,input().split()))
+d = {}
+for i in num:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+found = False    # 2nd loop: find first element with freq 1
+for i in num:
+    if d[i] == 1:
+        print(i)
+        found = True
+        break
+if not found:
+    print("No non-repeating element")
+    
+
+
+# 9. From a list of numbers, find the element that appears the most times.If there are multiple, you can return any one.
+
+
+num = list(map(int,input().split()))
+freq = {}
+max = 0
+for each in num:  # each is just a var name here 
+    if each in freq:
+        freq[each] += 1   # if there is already ele prst increase the count 
+    else:
+        freq[each] = 1   # add element into dict with count 1
+print(freq)
+
+# find element with maximum frequency
+max_freq = 0
+max_ele = None
+
+for key, value in freq.items():
+    if value > max_freq:
+        max_freq = value
+        max_ele = key
+
+print("Element with maximum frequency:", max_ele)
+
+
+
+# 10. Print ALL elements that appear MORE THAN ONCE
+
+num = list(map(int,input().split()))
+freq = {}
+max = 0
+for each in num:  # each is just a var name here 
+    if each in freq:
+        freq[each] += 1   # if there is already ele prst increase the count 
+    else:
+        freq[each] = 1   # add element into dict with count 1
+print(freq)
+
+# find element with frequency > 1
+print("ele freq > 1 are : ")
+for key, value in freq.items():
+    if value > 1:
+        print(key,":",value)
+        
+        
+# 11. Intersection of two arrays
+
+arr1 = [2,3]
+arr2 = [3,4,5]
+s1 = set(arr1) 
+s2 = set(arr2)
+i = s1 & s2  # & means “give me common elements” when used with sets
+# f = arr1+arr2  # this is concatenation
+print(i)
+
+
+
+
+
+
+
