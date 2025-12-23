@@ -1,0 +1,39 @@
+'''
+1. TWO POINTERS ----------
+
+Two Pointers in real life:
+
+Booking apps → matching seats / time slots efficientl
+Banking systems → matching debit & credit transactions
+Ride-sharing apps → matching drivers with riders by distance
+Chat & cloud apps → syncing messages/files between two lists
+Analytics systems → finding common users/items between datasets
+
+Why used:
+
+Avoids slow nested loops
+Works fast on sorted data
+Uses less memory
+Scales to millions of records
+
+One-line memory rule:
+
+When you have sorted data and need pairs/ranges → use Two Pointers.
+
+'''
+
+# 1. Remove Duplicates from a Sorted Array
+
+num = list(map(int,input().split()))
+
+if not arr:
+    print([])
+else:
+    i = 0  # pointer for unique elements
+    for j in range(1, len(arr)):  # j = 1
+        if arr[j] != arr[i]:
+            i += 1
+            arr[i] = arr[j] # reusing the same array to save memory
+
+    print("Unique elements:", *arr[:i+1])
+
