@@ -1,0 +1,136 @@
+# TWO POINTERS — TYPES (WITH REAL WORLD EXAMPLES)
+
+## 1. Left–Right Pointers
+
+One pointer starts at beginning, one at end.
+Used when
+* Array/String
+* Comparing pairs
+* Checking symmetry
+
+### Real-world example
+
+File comparison
+
+* One pointer at start of file
+* One pointer at end
+* Check if file content is symmetric (palindrome)
+
+Password validation
+
+* Compare characters from both ends
+
+### DSA examples
+
+* Palindrome check
+* Reverse array
+* Two Sum (sorted array)
+
+-----------------------------------------------------------------
+
+## 2. Slow–Fast Pointers (Tortoise & Hare)
+
+* One pointer moves **slow**
+* One pointer moves **fast**
+
+### Used when
+
+* Detect patterns
+* Remove duplicates
+* Cycle detection
+
+### Real-world example
+
+Traffic signal monitoring
+
+* One sensor checks every car
+* Another checks every second car
+* Detect abnormal loops
+
+Attendance list cleanup
+
+* Slow pointer writes unique names
+* Fast pointer scans list
+
+### DSA examples
+
+* Remove duplicates
+* Detect loop in linked list
+* Find middle element
+
+---------------------------------------------------------
+
+## 3. Two Arrays Pointers (Parallel pointers)
+
+* One pointer in each array
+* Move based on comparison
+
+### Used when
+
+* Data is sorted
+* Comparing two datasets
+
+### Real-world example
+
+Chat message sync
+
+* Phone messages list
+* Server messages list
+* Compare timestamps and sync missing ones
+
+Bank transaction matching
+
+* Debit list
+* Credit list
+* Match same amounts
+
+### DSA examples
+
+* Intersection of arrays
+* Merge sorted arrays
+
+------------------------------------------------------------------
+
+## 4. Window-Style Two Pointers
+
+### What it means
+
+* Two pointers define a range
+* Both move forward
+
+### Used when
+
+* Continuous range
+* Sum / average / max / min
+
+### Real-world example
+
+App analytics
+
+* Users active in last 10 minutes
+* Window slides with time
+
+Network monitoring
+
+* Data packets in last X seconds
+
+### DSA examples
+
+* Subarray sum
+* Max sum of k elements
+
+---------------------------------------------------------
+
+## ONE-LINE MEMORY MAP
+
+| Problem hint     | Pointer type |
+| ---------------- | ------------ |
+| Start & end      | Left–Right   |
+| Unique / cycle   | Slow–Fast    |
+| Two sorted lists | Two arrays   |
+| Range / subarray | Window       |
+
+
+
+
+
