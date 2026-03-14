@@ -1,0 +1,136 @@
+# 1a. reverse arr using 2 pointer approach
+'''
+a = [1,2,3,4,5]
+n = len(a)
+r = 0
+i,j = 0,n-1
+# print(a,i,j,n)
+if i<j:
+    a[i],a[j] = a[j],a[i]
+    i += 1
+    j -= 1
+print(a)
+
+# 1b. using slicing
+a = [1,2,3,4,5]
+r = a[:: -1]
+print(r)
+
+# 1c. reverse method and reversed function
+a = [2,3,4,5]
+b = [2,3,4,5]
+a.reverse()
+r1 = a
+r2 = list(reversed(b))
+print(r1)
+print(r2)
+
+
+
+# 2.linear search
+a = [3,47,0,76,32,87,21,90]
+target = 1
+n = len(a)
+i,j = 0,len(a)-1
+for i in range(n):
+    if a[i] == target :
+        print("found", a[i] , "at index" , i)
+        break
+else:
+        print("not found")
+
+# 2b. using enumerate
+
+a = [3,47,0,76,32,87,21,90]
+target = 90
+for index, value in enumerate(a):
+    if value == target:
+        print("Found at index", index)
+        break
+        
+# 2c. in one line
+
+a = [3,47,0,76,32,87,21,90]
+target = 90
+print([i for i,v in enumerate(a) if v == target])
+
+
+
+# 3a. find largest element in the arr
+
+a = [3,47,0,76,32,87,21,90]
+m = 0
+for i in a:
+    if i > m:
+        m = i
+print(m)
+
+# 3b. index
+a = [3,47,0,76,32,87,21,90]
+max_r = a[0]
+for i in range(len(a)):
+    if a[i] > max_r:
+        max_r = a[i]
+print(max_r)
+        
+
+# 3c. uisng max fun()
+a = [3,47,0,76,32,87,21,90]
+r = max(a)
+print(r)
+
+#3d. brute force method(sort the arr and print last ele)
+a = [3,47,0,76,32,87,21,90]
+n = len(a)
+a.sort()
+r = a[n-1]
+print(r)
+
+
+# 4a. sort the arr(asc and desc)
+
+a = [3,47,0,76,32,87,21,90]
+b = [6,90,43,8,56,8,76,23]
+b.sort() # asc # other way :  b = sorted(a) print(b)
+a.sort(reverse=True)  #desc
+print("desc = ", a)
+print("asc = ", b)
+
+# 4b. using bubble sort
+a = [3,47,0,76,32,87,21,90]
+n = len(a)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if a[j] > a[j+1]: # asc
+        # a[j] < a[j+1]: (desc)
+            a[j], a[j+1] = a[j+1], a[j]
+
+print(a)
+
+# 5a. check if arr is sorted or not
+a = [5,64,1]
+print(a == sorted(a) or a == sorted(a, reverse=True))
+
+
+
+# 6a. move all zeros to end of arr
+
+a = [2,0,8,4,0,2,6,0,0,21]
+j = 0
+for i in range(len(a)):
+    if a[i] != 0:
+        a[j], a[i] = a[i], a[j]
+        j += 1
+
+print(a)
+
+'''
+#6b.
+a = [2,0,8,4,0,2,6,0,0,21]
+b = []
+for i in a:
+    if i != 0:
+        b.append(i)
+zeros = len(a) - len(b)
+b.extend([0]*zeros)
+print(b)
